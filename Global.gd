@@ -7,7 +7,7 @@ var tail_size = 150
 var playing = false
 var ending = false
 
-var to_who = "李星露"
+var to_who = "你"
 
 onready var TweenColor = Tween.new()
 # Called when the node enters the scene tree for the first time.

@@ -43,43 +43,38 @@
 [ext_resource path="res://Bird/circle_idle8.png" type="Texture" id=41]
 [ext_resource path="res://Bird/circle_idle4.png" type="Texture" id=42]
 
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 2
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 1024
 outline_size = 6
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 32
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=4]
 size = 20
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="Curve" id=12]
+[sub_resource type="Curve" id=5]
 _data = [ Vector2( 0, 0.765625 ), 0.0, 0.0, 0, 0, Vector2( 0.386905, 0.332933 ), 0.0, 0.0, 0, 0, Vector2( 0.791667, 0.15024 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="Curve" id=2]
+[sub_resource type="Curve" id=6]
 min_value = -1.0
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="SpriteFrames" id=13]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 25 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 22 ) ],
 "loop": false,
 "name": "to_bird",
 "speed": 12.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 25 ) ],
-"loop": false,
-"name": "to_circle",
-"speed": 10.0
 }, {
 "frames": [ ExtResource( 38 ), ExtResource( 40 ), ExtResource( 34 ), ExtResource( 42 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 37 ) ],
 "loop": true,
@@ -90,9 +85,14 @@ animations = [ {
 "loop": true,
 "name": "bird",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "to_circle",
+"speed": 10.0
 } ]
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=8]
 resource_name = "live_light"
 length = 6.0
 loop = true
@@ -133,47 +133,47 @@ tracks/2/keys = {
 "values": [ 0.2, 0.15, 0.2 ]
 }
 
-[sub_resource type="CircleShape2D" id=15]
+[sub_resource type="CircleShape2D" id=9]
 resource_local_to_scene = true
 radius = 5.0
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=10]
 size = 32
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=11]
 size = 28
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=12]
 size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=13]
 size = 28
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=14]
 size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=15]
 size = 42
 font_data = ExtResource( 1 )
 
-[sub_resource type="Environment" id=17]
+[sub_resource type="Environment" id=16]
 background_mode = 4
 tonemap_exposure = 0.6
 auto_exposure_enabled = true
@@ -181,7 +181,7 @@ glow_enabled = true
 glow_bicubic_upscale = true
 adjustment_enabled = true
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=17]
 size = 32
 use_filter = true
 font_data = ExtResource( 1 )
@@ -190,11 +190,11 @@ font_data = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
-material = SubResource( 3 )
+material = SubResource( 1 )
 margin_left = 1.22766
 margin_right = 5121.23
 margin_bottom = 1452.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 text = "女生节快乐"
 __meta__ = {
@@ -246,7 +246,7 @@ margin_bottom = 106.0
 margin_right = 132.0
 margin_bottom = 52.0
 rect_min_size = Vector2( 0, 50 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "展开"
 
 [node name="ZiDongHuanSe" type="Button" parent="GUI/HBoxContainer/MarginContainer/VBoxContainer"]
@@ -254,7 +254,7 @@ margin_top = 56.0
 margin_right = 132.0
 margin_bottom = 106.0
 rect_min_size = Vector2( 0, 50 )
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 text = "自动换色：开"
 __meta__ = {
 "_editor_description_": ""
@@ -299,8 +299,8 @@ tangential_accel_random = 1.0
 angle = 180.0
 angle_random = 0.5
 scale_amount = 0.05
-scale_amount_curve = SubResource( 12 )
-hue_variation_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 5 )
+hue_variation_curve = SubResource( 6 )
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="GUI/FakeBird"]
 amount = 36
@@ -320,8 +320,8 @@ tangential_accel_random = 1.0
 angle = 180.0
 angle_random = 0.5
 scale_amount = 0.05
-scale_amount_curve = SubResource( 12 )
-hue_variation_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 5 )
+hue_variation_curve = SubResource( 6 )
 
 [node name="CPUParticles2D3" type="CPUParticles2D" parent="GUI/FakeBird"]
 amount = 20
@@ -341,12 +341,12 @@ tangential_accel_random = 1.0
 angle = 180.0
 angle_random = 0.5
 scale_amount = 0.05
-scale_amount_curve = SubResource( 12 )
-hue_variation_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 5 )
+hue_variation_curve = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="GUI/FakeBird"]
 scale = Vector2( 0.1, 0.1 )
-frames = SubResource( 13 )
+frames = SubResource( 7 )
 animation = "to_bird"
 frame = 5
 playing = true
@@ -360,27 +360,28 @@ energy = 0.8
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/FakeBird"]
 autoplay = "live_light"
 playback_speed = 0.7
-anims/live_light = SubResource( 14 )
+anims/live_light = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GUI/FakeBird"]
 rotation = 1.5708
-shape = SubResource( 15 )
+shape = SubResource( 9 )
 
 [node name="Area2D" type="Area2D" parent="GUI/FakeBird"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="GUI/FakeBird/Area2D"]
 rotation = 1.5708
-shape = SubResource( 15 )
+shape = SubResource( 9 )
 
 [node name="Ding" parent="GUI" instance=ExtResource( 6 )]
 position = Vector2( -66.9862, 569.415 )
 z_index = 1
+frame = 0
 
 [node name="Label" type="Label" parent="GUI"]
 anchor_right = 1.0
 margin_right = -21.0
 margin_bottom = 46.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 10 )
 text = "已点亮灯光：10  /  10"
 align = 2
 __meta__ = {
@@ -392,7 +393,7 @@ margin_left = 6.0
 margin_top = 139.883
 margin_right = 518.0
 margin_bottom = 327.883
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 11 )
 bbcode_enabled = true
 bbcode_text = "这个[u]“展开”[/u]按钮能够打开[u]调色板[/u]，
 展开后再按[u]“收起”[/u]便能收起调色板,
@@ -412,7 +413,7 @@ margin_left = 651.0
 margin_top = 47.0
 margin_right = 1056.0
 margin_bottom = 188.0
-custom_fonts/normal_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 12 )
 bbcode_enabled = true
 bbcode_text = "当点亮灯光达到[u]最大值[/u]，
 你将被传送到[u]下一个[/u]地点
@@ -430,7 +431,7 @@ margin_left = 7.0
 margin_top = 324.811
 margin_right = 583.0
 margin_bottom = 551.811
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 13 )
 bbcode_enabled = true
 bbcode_text = "[u]鼠标左键[/u]：进入蓄力状态，松开将飞行。
 飞行初速度与按键时长有关
@@ -452,7 +453,7 @@ margin_left = 581.0
 margin_top = 284.585
 margin_right = 1018.0
 margin_bottom = 526.585
-custom_fonts/normal_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 14 )
 custom_colors/default_color = Color( 0.388235, 0.611765, 1, 1 )
 bbcode_enabled = true
 bbcode_text = "了解说明后，
@@ -474,7 +475,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -60.4269
 margin_bottom = -0.42688
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 15 )
 text = "愿幸福之翼始终于前方—— to "
 align = 1
 percent_visible = 0.0
@@ -484,7 +485,7 @@ __meta__ = {
 }
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 17 )
+environment = SubResource( 16 )
 script = ExtResource( 7 )
 
 [node name="nv" type="Node2D" parent="."]
@@ -562,7 +563,7 @@ margin_left = 3264.53
 margin_top = 548.603
 margin_right = 3302.53
 margin_bottom = 839.603
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "这里可以通过"
 autowrap = true
